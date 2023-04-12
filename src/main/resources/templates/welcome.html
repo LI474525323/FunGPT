@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FunGPT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet">
+
+</head>
+<body class="login-body">
+<div class="container">
+    <div class="form-signin-heading text-center">
+        <br>
+        <label style="color: rgb(255,224,208);font-size:40px" >FunGPT测试</label>
+    </div>
+<form action="/welcome" method="Post" target="frameName">
+    <div class="login-wrap">
+        <div style="display:inline">
+            <label style =" color:black; width:530px">问题</label>
+            <label style="color: black" >回答</label><br>
+            <textarea style="resize:none" id="input" name="input" cols="70" rows="25" th:text="${question}">输入信息</textarea>
+        </div>
+        <div style="display:inline">
+            <textarea readonly style="resize:none" id="output" name="output" cols="70" rows="25" th:text="${msg}"></textarea>
+        </div>
+        <input value="提交问题" class="btn btn-primary" type="submit" /><br>
+    </div>
+</form>
+<!--不刷新页面-->
+<!--<iframe src="" frameborder="0" name="frameName"></iframe>-->
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<!-- Placed js at the end of the document so the pages load faster -->
+</div>
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+</body>
+</html>
