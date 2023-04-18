@@ -42,7 +42,7 @@ public class LimitRequestAspect {
         if (uCount >= limitRequest.count()) { // 超过次数，不执行目标方法
             //这里的返回对象类型根据controller方法的返回方式一致
 //            return "小Fun的魔法是有限的，请小主任省着点用，先休息5s噢！！！";
-            String ret = "小Fun的魔法是有限的，请小主任省着点用，先休息5s噢！！！";
+            String ret = "小Fun的魔法是有限的，请小主人省着点用，先休息5s噢！！！";
             ModelAndView view = new ModelAndView("welcome");
             view.addObject("msg", ret);
             return view;

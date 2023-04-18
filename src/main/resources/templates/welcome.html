@@ -3,39 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title>FunGPT</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0,minimum-scale=0.5,user-scalable=yes">
     <meta name="description" content="">
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="#" type="image/png">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet">
 
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body class="login-body">
-<div class="container">
-    <div class="form-signin-heading text-center">
-        <br>
-        <label style="color: rgb(255,224,208);font-size:40px" >FunGPT测试</label>
-    </div>
-<form action="/welcome" method="Post" target="frameName">
-    <div class="login-wrap">
-        <div style="display:inline">
-            <label style =" color:black; width:530px">问题</label>
-            <label style="color: black" >回答</label><br>
-            <textarea style="resize:none" id="input" name="input" cols="70" rows="25" th:text="${question}">输入信息</textarea>
-        </div>
-        <div style="display:inline">
-            <textarea readonly style="resize:none" id="output" name="output" cols="70" rows="25" th:text="${msg}"></textarea>
-        </div>
-        <input value="提交问题" class="btn btn-primary" type="submit" /><br>
-    </div>
-</form>
-<!--不刷新页面-->
-<!--<iframe src="" frameborder="0" name="frameName"></iframe>-->
-<!-- Placed js at the end of the document so the pages load faster -->
 
-<!-- Placed js at the end of the document so the pages load faster -->
-<!-- Placed js at the end of the document so the pages load faster -->
+
+<style>
+    .fdbody2{
+
+        width: 1200px;
+        height:500px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .img_ioc2{
+        width:12px;
+        height:12px;
+        margin-top: -11px
+    }
+
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var height=$("#output")[0].scrollHeight;
+        $("#textarea").scrollTop(height);
+    })
+</script>
+
+
+<body class="login-body">
+<div class="fdbody2">
+    <form method="post" th:action="@{/welcome} ">
+        <div style="text-align: center;">
+            <br>
+            <label style="color: rgb(255,224,208);font-size:40px" >FunGPT v0.4</label>
+        </div>
+        <div class="login-wrap">
+            <div style="display:inline">
+                <label style =" color:rgba(255,255,255,0.84); width:530px;font-size:20px" >问题</label>
+                <label style="color: rgba(255,255,255,0.84);font-size:20px" >回答</label><br>
+<!--                style="min-height: 500px;min-width: 520px;max-height: 250px; max-width: 200px;"-->
+                <textarea id="input" name="input" rows="25" cols="70" th:text="${question}">输入信息</textarea>
+            </div>
+            <div style="display:inline">
+                <textarea readonly id="output" name="output" rows="25" cols="70" th:text="${msg}"></textarea>
+            </div><br>
+            <input value="提交问题" class="btn btn-primary" type="submit" /><br>
+        </div>
+
+    </form>
+    <!--不刷新页面-->
+    <!--<iframe src="" frameborder="0" name="frameName"></iframe>-->
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+    <!-- Placed js at the end of the document so the pages load faster -->
+    <!-- Placed js at the end of the document so the pages load faster -->
 </div>
 
 <script src="js/jquery-1.10.2.min.js"></script>

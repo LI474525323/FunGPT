@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
     @RequestMapping("/hello")
+    @LimitRequest(count=2)
     public String handle01(){
         System.out.println("hello");
         return "Hello, Spring Boot 2!";

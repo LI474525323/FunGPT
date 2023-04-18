@@ -66,12 +66,14 @@ hr {
 }
 
 .form-signin {
-    max-width: 330px;
-    margin: 100px auto;
+    max-width: 700px;
+    margin: 10px auto;
     background: #fff;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
 }
+
+
 
 .form-signin .form-signin-heading {
     margin: 0;
@@ -173,7 +175,7 @@ hr {
 }
 
 .login-wrap {
-    padding: 20px;
+    padding: 50px;
     position: relative;
 }
 
